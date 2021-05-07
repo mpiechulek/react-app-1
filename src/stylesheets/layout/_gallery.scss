@@ -1,9 +1,9 @@
-.content-gallery-1 {   
+.content-gallery-1 {
     display: grid;
     grid-gap: 1rem;
     grid-template-columns: repeat(6, 1fr);
     grid-template-rows: repeat(5, 15rem);
-    background-color: $color-background-container;   
+    background-color: $color-background-container;
 
     grid-template-areas:
         "gallery-1 gallery-1 gallery-6 gallery-7 gallery-7 gallery-7"
@@ -12,6 +12,28 @@
         "gallery-3 gallery-5 gallery-9 gallery-9 gallery-10 gallery-11"
         "gallery-4 gallery-5 gallery-9 gallery-9 gallery-10 gallery-11"
     ;
+
+    @include respond(md) {
+
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(11, 30rem);
+
+        grid-template-areas:
+            "gallery-1"
+            "gallery-1"
+            "gallery-2"
+            "gallery-3"
+            "gallery-4"
+            "gallery-5"
+            "gallery-6"
+            "gallery-7"
+            "gallery-8"
+            "gallery-9"
+            "gallery-10"
+            "gallery-11"
+        ;
+
+    }
 
     .gallery-1 {
         grid-area: gallery-1;
@@ -70,7 +92,7 @@
         &:hover {
 
             scale: 1.3;
-            
+
         }
     }
 }
