@@ -1,0 +1,57 @@
+
+
+// MEDIA QUERY MANAGER
+
+/*
+0 - 450px : Phone-small
+450 - 600px : Phone
+600 - 800px : Tablet portrait
+800 - 1200px : Tablet landscape
+1200 -1920px : Large desktop
+1920px + : Big desktop
+
+xl 1920 - extra large
+lg 1280 - large
+md 960 - medium
+sm 600 - small
+xs 400 - extra small
+*/
+
+// In this spot we are using em's because there value is global 
+@mixin respond($breakpoint) {
+
+    @if $breakpoint == xs {
+        @media only screen and (max-width: 25em) {
+            @content
+        };
+        // 400px
+    }
+
+    @if $breakpoint == sm {
+        @media only screen and (max-width: 37.5em) {
+            @content
+        };
+        // 600px
+    }
+
+    @if $breakpoint == md {
+        @media only screen and (max-width: 60em) {
+            @content
+        }; 
+        // 960px
+    }
+
+    @if $breakpoint == lg {
+        @media only screen and (max-width: 80em) {
+            @content
+        }; 
+        // 1280px
+    }
+
+    @if $breakpoint == xl {
+        @media only screen and (min-width: 120em) {
+            @content
+        }; 
+        // 1920px
+    }
+}

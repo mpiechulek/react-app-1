@@ -1,25 +1,43 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import './App.scss';
+import HomeScreen from './pages/page/HomeScreen/HomeScreen';
+import ContentScreen from './pages/page/ContentScreen/ContentScreen';
+import { Route, BrowserRouter as Router, Switch } from 'react-router-dom';
+import Login from './pages/page/Login/Login';
+import Header from './components/Header/Header';
+import NotFound from './pages/page/NotFound/NotFound';
+import Footer from './components/Footer/Footer';
 
 function App() {
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+
+      <div className="main">
+
+        <div className="main__container">
+
+          <Header />
+
+          <Switch>
+
+            <Route path='/' component={HomeScreen} exact />
+
+            <Route path='/content' component={ContentScreen} exact />
+
+            <Route path='/login' component={Login} exact />
+
+            <Route path='' component={NotFound} />
+
+          </Switch>
+
+          <Footer/>
+
+        </div>
+
+      </div>
+
+    </Router>
   );
 }
 

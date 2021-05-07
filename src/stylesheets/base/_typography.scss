@@ -1,0 +1,122 @@
+.header-main {
+
+    font-size: 4rem;
+    letter-spacing: 8px;
+    font-weight: 200;
+
+    @include respond(sm) {        
+    
+        font-size: 5rem;
+        
+    }
+
+    @include respond(sm) {        
+    
+        font-size: 3rem;
+        
+    }
+    
+}
+
+.header-main-1 {
+
+    font-size: 10rem;
+    color: white;
+    font-weight: 400;
+    letter-spacing: 7px;
+
+    @include respond(sm) {        
+    
+        font-size: 4.5rem;
+
+    }
+}
+
+.header-main-2 {
+
+    position: relative;
+    z-index: 1000;
+    font-size: 7rem;
+    color: white;
+    font-weight: 300;
+    letter-spacing: 7px;
+
+    @include respond(sm) {        
+    
+        font-size: 4rem;
+
+    }
+}
+
+.header-main-3 {
+
+    font-size: 3.2rem;
+    color: white;
+    font-weight: 300;
+    letter-spacing: 5px;
+
+    @include respond(sm) {        
+    
+        font-size: 2.2rem;
+
+    }
+}
+
+.header-4 {
+
+    font-size: 2rem;
+    text-transform: uppercase;
+    font-weight: 600;
+    letter-spacing: 5px;
+
+    @include respond(sm) {        
+    
+        font-size: 1.6rem;
+
+    }
+
+    &--green {
+        color: #00fff2;
+    }
+
+}
+
+.paragraph {
+
+    font-size: 1rem;
+    color: white;
+    letter-spacing: 2px;
+    font-weight: 300;
+}
+
+.login-form-text {
+    
+    font-size: 1.6rem;
+    color: white;
+
+    &--button-text-color {
+        color: $color-background-container;
+    }
+
+    &--alert-text-color {
+        color: $color-alert;
+    }
+}
+
+li {
+    list-style-type: none;
+}
+
+a {
+
+    color: white;
+    text-decoration: none;
+    font-size: 1.6rem;
+    letter-spacing: 2px;
+    cursor: pointer;
+    transition: all 0.15s ease-in-out;
+
+    &:hover {
+        color: gray;
+    }
+}

@@ -1,0 +1,85 @@
+.footer {
+    bottom: 0;
+    height: 30rem;
+    width: 100%;
+    background-color: $color-background-container;
+    padding: 5rem 7rem 5rem 7rem;
+    margin-top: 5rem;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+
+    @include respond(md) {
+        height: auto;
+        width: 100%;
+        flex-direction: column;
+    }
+
+    &__wrapper {
+
+        height: 100%;
+        width: 33%;
+        padding: 2rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+
+        @include respond(md) {
+            width: 100%;
+            justify-content: center;
+            align-items: center;
+            margin-bottom: 1rem;
+        }
+
+        .margin-bottom {
+            margin-bottom: 1rem;
+        }
+
+        &--align-center {
+            align-items: center;
+        }
+
+        &--order-1 {
+
+            @include respond(md) {
+
+                order: 1;
+
+            }
+
+        }
+
+        &--order-2 {
+
+            @include respond(md) {
+
+                order: 2;
+
+            }
+        }
+
+        &--order-3 {
+
+            @include respond(md) {
+
+                order: 3;
+
+            }
+        }
+    }
+
+    &__wrapper:not(:last-child) {
+
+        border-right: 1px solid white;
+
+        @include respond(md) {
+            border-right: none;
+            border-bottom: 1px solid white;
+        }
+    }
+
+
+
+}

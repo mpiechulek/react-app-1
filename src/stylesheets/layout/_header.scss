@@ -1,0 +1,32 @@
+.header-container {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    margin-top: 1rem;
+    margin-bottom: 10rem;
+
+    @include respond(md) {
+
+        padding: 0 2rem;
+
+    }
+
+    @include respond(sm) {
+
+        margin-bottom: 3em;
+        flex-direction: column;
+
+    }
+
+    .main-header-margin {
+
+        @include respond(md) {
+
+            margin-bottom: 2rem;
+
+        }
+    }
+
+}

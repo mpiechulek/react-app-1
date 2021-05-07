@@ -1,0 +1,42 @@
+.image-position-login {
+
+    top: 0;
+    right: 0;    
+    height: 100%;
+    width: 60%;
+    z-index: -10;
+    position: absolute;    
+
+    @include respond(md) {
+
+        width: 48%;
+
+    }
+
+    @include respond(sm) {
+
+        width: 37%;
+
+    }
+
+    @include respond(xs) {
+
+        display: none;
+
+    }
+}
+
+.login-form-wrapper {    
+
+    width: 30rem;
+
+    .login-page-margin-bottom-2 {
+        margin-bottom: 3rem;
+    }
+    
+    .login-page-margin-bottom-1 {
+        margin-bottom: 1rem;
+    }
+    
+
+}
