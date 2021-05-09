@@ -33,9 +33,9 @@ const HomeContainerFour = () => {
                     </div>
 
                     <div className='wrapper-col wrapper-col--margin-right '>
-                        <div className='image-grid'>
-                           <img className='image-size grid-item-1' src={image_2} alt="img_11" />
-                           <img className='image-size grid-item-2' src={image_3} alt="img_22" />
+                        <div className='image-flex-container'>
+                           <img className='image-size ' src={image_2} alt="img_11" />
+                           <img className='image-size flex-item-2' src={image_3} alt="img_22" />
 
                         </div>
                     </div>
