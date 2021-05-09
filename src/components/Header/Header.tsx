@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter as Router, Link } from 'react-router-dom';
+import { BrowserRouter as Router, Link, NavLink} from 'react-router-dom';
 
 const Header = () => {
 
@@ -16,31 +16,31 @@ const Header = () => {
 
                     <li className='nav-list__list-item'>
 
-                        <Link to='/'>
+                        <NavLink activeClassName='nav-active-link' to='/home'>
 
                             Home
 
-                        </Link>
+                        </NavLink>
 
                     </li>
 
                     <li className='nav-list__list-item'>
 
-                        <Link to='/content'>
+                        <NavLink activeClassName='nav-active-link' to='/content'>
 
                             Content
 
-                        </Link>
+                        </NavLink>
 
                     </li>
 
                     <li className='nav-list__list-item'>
 
-                        <Link to='/login'>
+                        <NavLink activeClassName='nav-active-link' to='/login'>
 
                             Login
 
-                        </Link>
+                        </NavLink>
 
                     </li>
 

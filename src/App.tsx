@@ -23,6 +23,8 @@ function App() {
 
             <Route path='/' component={HomeScreen} exact />
 
+            <Route path='/home' component={HomeScreen} exact />
+
             <Route path='/content' component={ContentScreen} exact />
 
             <Route path='/login' component={Login} exact />
