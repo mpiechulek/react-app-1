@@ -1,13 +1,24 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { useForm } from "react-hook-form";
+import { Redirect } from 'react-router-dom';
+import { AuthContext } from '../../../../context/AuthContext';
 import image_1 from './../../../../assets/images/1509534.jpeg'
 
 const LoginComponent = () => {
 
-    const { register, handleSubmit, watch, formState: { errors } } = useForm();
+    const { register, handleSubmit, watch, formState: { errors, isValid } } = useForm();
+    const { isLoggedIn, setIsLoggedIn } = useContext(AuthContext);
 
     const onSubmit = (data: any) => {
+
+        setIsLoggedIn(!isLoggedIn);
         console.log(data);
+    }
+
+    if(isLoggedIn) {
+        
+        return <Redirect to='/user'/>
+
     }
     
     return (
@@ -27,7 +38,7 @@ const LoginComponent = () => {
 
                         <input
                             className='login-input login-form-text '
-                            type="email"
+                            type="email"                           
                             placeholder='email'
                             {...register(
                                 "email",
@@ -45,7 +56,7 @@ const LoginComponent = () => {
 
                         <input
                             className='login-input login-form-text '
-                            type="password"
+                            type="password"                           
                             placeholder='password'
                             {...register(
                                 "password", {
@@ -57,9 +68,21 @@ const LoginComponent = () => {
                             })}
                         />
 
-                        <button className='btn btn__form-login login-form-text login-form-text--button-text-color login-page-margin-bottom-1 ' type="submit">
-                            Login
+                        <button 
+
+                            className='btn
+                                btn--form-login
+                                login-form-text
+                                login-form-text--button-text-color
+                                login-page-margin-bottom-1 '
+                           
+                             type="submit"
+                            
+                        >
+                            Login 
                          </button>
+
+                         <p>{isValid}</p>
 
                         {errors.password &&
                             <p className='login-form-text login-form-text--alert-text-color'>
@@ -76,8 +99,6 @@ const LoginComponent = () => {
                     </form>
 
                 </div>
-
-
 
             </section>
 

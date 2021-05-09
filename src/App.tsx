@@ -7,39 +7,48 @@ import Login from './pages/page/Login/Login';
 import Header from './components/Header/Header';
 import NotFound from './pages/page/NotFound/NotFound';
 import Footer from './components/Footer/Footer';
+import { AuthContextProvider } from './context/AuthContext';
+import { UserPage } from './pages/page/UserPage/UserPage';
 
 function App() {
 
   return (
-    <Router>
 
-      <div className="main">
+    <AuthContextProvider>
 
-        <div className="main__container">
+      <Router>
 
-          <Header />
+        <div className="main">
 
-          <Switch>
+          <div className="main__container">
 
-            <Route path='/' component={HomeScreen} exact />
+            <Header />
 
-            <Route path='/home' component={HomeScreen} exact />
+            <Switch>
 
-            <Route path='/content' component={ContentScreen} exact />
+              <Route path='/' component={HomeScreen} exact />
 
-            <Route path='/login' component={Login} exact />
+              <Route path='/home' component={HomeScreen} exact />
 
-            <Route path='' component={NotFound} />
+              <Route path='/content' component={ContentScreen} exact />
 
-          </Switch>
+              <Route path='/login' component={Login} exact />
 
-          <Footer/>
+              <Route path='/user' component={UserPage} exact />
+
+              <Route path='' component={NotFound} />
+
+            </Switch>
+
+            <Footer />
+
+          </div>
 
         </div>
 
-      </div>
+      </Router>
 
-    </Router>
+    </AuthContextProvider>
   );
 }
 
