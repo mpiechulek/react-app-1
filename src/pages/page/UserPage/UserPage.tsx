@@ -1,6 +1,7 @@
 import React, { useContext } from 'react'
 import { AuthContext } from '../../../context/AuthContext';
 import {Redirect} from 'react-router-dom'
+import { UserProfile } from './components/UserProfile/UserProfile';
 
 export const UserPage = () => {
 
@@ -15,7 +16,7 @@ export const UserPage = () => {
     return (
         <section className="user-page-container">
 
-            <h1>User Page</h1>
+            <UserProfile/>
             
         </section>
     )

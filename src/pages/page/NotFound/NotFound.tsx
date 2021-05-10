@@ -8,8 +8,8 @@ const NotFound = () => {
 
             <article className='main-content-box'>
 
-                <h1 className='header-main-1'>404 </h1>
-                <h2 className='header-main-2'>Page not found</h2>
+                <h1 className='header-main-1'>404</h1>
+                <h3 className='header-main-3'>Page not found</h3>
 
             </article>
 
