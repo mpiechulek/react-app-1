@@ -6,13 +6,13 @@ const ContentScreen = () => {
 
     return (
 
-        <div className='content'>
+        <section className='content-container'>
         
             <Context />
 
             <Gallery />
 
-        </div>
+        </section>
     )
 }
 

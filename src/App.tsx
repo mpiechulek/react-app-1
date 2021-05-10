@@ -16,9 +16,7 @@ function App() {
 
     <AuthContextProvider>
 
-      <Router>
-
-        {/* <div className="main"> */}
+      <Router>   
 
           <div className="main__container">
 
@@ -43,9 +41,7 @@ function App() {
             <Footer />
 
           </div>
-
-        {/* </div> */}
-
+     
       </Router>
 
     </AuthContextProvider>

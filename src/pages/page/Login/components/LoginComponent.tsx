@@ -23,90 +23,89 @@ const LoginComponent = () => {
 
     return (
 
-        <>
-            <section className='main-content-box'>
 
-                <img className='image-position-login' src={image_1} alt="img_abstract" />
+        <article className='main-content-box'>
 
-                <div className='login-form-wrapper'>
+            <img className='image-position-login' src={image_1} alt="img_abstract" />
 
-                    <h2 className='header-main-2 login-page-margin-bottom-2'>Login</h2>
+            <div className='login-form-wrapper'>
 
-                    <form className='login-form' onSubmit={handleSubmit(onSubmit)}>
+                <h2 className='header-main-2 login-page-margin-bottom-2'>Login</h2>
 
-                        <label className='login-form-text login-page-margin-bottom-1'>E-mail</label>
+                <form className='login-form' onSubmit={handleSubmit(onSubmit)}>
 
-                        <input
-                            className='login-input login-form-text '
-                            type="email"
-                            placeholder='email'
-                            {...register(
-                                "email",
-                                {
-                                    required: 'Email address is required',
-                                    pattern: {
-                                        value: /\S+@\S+.\S+/,
-                                        message: "Entered value does not match email format"
-                                    }
+                    <label className='login-form-text login-page-margin-bottom-1'>E-mail</label>
+
+                    <input
+                        className='login-input login-form-text '
+                        type="email"
+                        placeholder='email'
+                        {...register(
+                            "email",
+                            {
+                                required: 'Email address is required',
+                                pattern: {
+                                    value: /\S+@\S+.\S+/,
+                                    message: "Entered value does not match email format"
                                 }
-                            )}
-                        />
+                            }
+                        )}
+                    />
 
-                        <label className='login-form-text login-page-margin-bottom-1'>Password</label>
+                    <label className='login-form-text login-page-margin-bottom-1'>Password</label>
 
-                        <input
-                            className='login-input login-form-text '
-                            type="password"
-                            placeholder='password'
-                            {...register(
-                                "password", {
-                                required: 'Password required',
-                                minLength: {
-                                    value: 8,
-                                    message: 'The password is to short, it should be min. 8 characters'
-                                }
-                            })}
-                        />
+                    <input
+                        className='login-input login-form-text '
+                        type="password"
+                        placeholder='password'
+                        {...register(
+                            "password", {
+                            required: 'Password required',
+                            minLength: {
+                                value: 8,
+                                message: 'The password is to short, it should be min. 8 characters'
+                            }
+                        })}
+                    />
 
-                        <button
+                    <button
 
-                            className='btn
+                        className='btn
                                 btn--form-login
                                 login-form-text
                                 login-form-text--button-text-color
                                 login-page-margin-bottom-1 '
 
-                            type="submit"
+                        type="submit"
 
-                            disabled={isValid}
+                        disabled={isValid}
 
-                        >
+                    >
 
-                            Login
+                        Login
 
                          </button>
 
-                        <p>{isValid}</p>
+                    <p>{isValid}</p>
 
-                        {errors.password &&
-                            <p className='login-form-text login-form-text--alert-text-color'>
-                                {errors.password.message}
-                            </p>
-                        }
+                    {errors.password &&
+                        <p className='login-form-text login-form-text--alert-text-color'>
+                            {errors.password.message}
+                        </p>
+                    }
 
-                        {errors.email &&
-                            <p className='login-form-text login-form-text--alert-text-color'>
-                                {errors.email.message}
-                            </p>
-                        }
+                    {errors.email &&
+                        <p className='login-form-text login-form-text--alert-text-color'>
+                            {errors.email.message}
+                        </p>
+                    }
 
-                    </form>
+                </form>
 
-                </div>
+            </div>
 
-            </section>
+        </article>
 
-        </>
     )
 }
 

@@ -8,7 +8,7 @@ const HomeScreen = () => {
 
     return (
 
-        <div className="home-container">
+        <section className="home-container">
             
             <HomeContainerOne />
 
@@ -18,7 +18,7 @@ const HomeScreen = () => {
 
             <HomeContainerFour />
 
-        </div>
+        </section>
 
     )
 }

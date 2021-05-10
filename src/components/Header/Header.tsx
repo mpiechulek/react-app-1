@@ -8,7 +8,7 @@ const Header = () => {
 
     return (
 
-        <div className='header-container'>
+        <header className='header-container'>
 
             <h2 className="header-main main-header-margin">SupremeVision</h2>
 
@@ -87,7 +87,7 @@ const Header = () => {
 
             </nav>
 
-        </div>
+        </header>
 
     )
 }

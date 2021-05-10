@@ -5,55 +5,51 @@ import imageBuilding from './../../../../../assets/images/3610226.jpg'
 const HomeContainerTwo = () => {
     return (
 
-        <div>
+        <article className='main-content-box'>
 
-            <section className='main-content-box'>
+            <div className='container-wrapper'>
 
-                <div className='container-wrapper'>
-                    
-                    <div className='wrapper-col wrapper-col--margin-right'>
+                <div className='wrapper-col wrapper-col--margin-right'>
 
-                        <h2 className='header-main-2'>01</h2>
+                    <h2 className='header-main-2'>01</h2>
 
-                        <h3 className='header-main-3'>Founders</h3>
+                    <h3 className='header-main-3'>Founders</h3>
 
-                        <h3 className='header-main-3 par-margin-bottom'>Vision</h3>
+                    <h3 className='header-main-3 par-margin-bottom'>Vision</h3>
 
-                        <div className='main-line main-line--margin-bottom'></div>                        
+                    <div className='main-line main-line--margin-bottom'></div>
 
-                        <p className='paragraph par-margin-bottom'>
+                    <p className='paragraph par-margin-bottom'>
 
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad optio sit est obcaecati odit, reprehenderit possimus quae vel earum aut rem tenetur laboriosam alias dicta eveniet culpa laborum deserunt voluptatibus.
-                            
-                        </p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad optio sit est obcaecati odit, reprehenderit possimus quae vel earum aut rem tenetur laboriosam alias dicta eveniet culpa laborum deserunt voluptatibus.
 
-                        <p className='paragraph par-margin-bottom'>
+                    </p>
 
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    <p className='paragraph par-margin-bottom'>
 
-                        </p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
 
-                    </div>
-
-                    <div className='wrapper-col wrapper-col--margin-right '>
-
-                        <img className='image-size' src={imageAuth} alt="img_author" />
-
-                    </div>
-
-                    <div className='wrapper-col wrapper-col--margin-right'>
-
-                        <img className='image-size' src={imageBuilding} alt="img_building" />
-
-                    </div>
+                    </p>
 
                 </div>
 
-                <div className='main-line main-line--margin-top'></div>
+                <div className='wrapper-col wrapper-col--margin-right '>
 
-            </section>
+                    <img className='image-size' src={imageAuth} alt="img_author" />
 
-        </div>
+                </div>
+
+                <div className='wrapper-col wrapper-col--margin-right'>
+
+                    <img className='image-size' src={imageBuilding} alt="img_building" />
+
+                </div>
+
+            </div>
+
+            <div className='main-line main-line--margin-top'></div>
+
+        </article>
 
     )
 }

@@ -5,11 +5,11 @@ const Login = () => {
 
     return (
         
-        <div>
+        <section>
 
             <LoginComponent/>
             
-        </div>
+        </section>
     )
 }
 
