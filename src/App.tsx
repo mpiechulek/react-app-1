@@ -22,6 +22,8 @@ function App() {
 
             <Header />
 
+            <main>
+
             <Switch>
 
               <Route path='/' component={HomeScreen} exact />
@@ -37,6 +39,8 @@ function App() {
               <Route path='' component={NotFound} />
 
             </Switch>
+
+            </main>
 
             <Footer />
 
