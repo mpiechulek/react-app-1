@@ -22,21 +22,29 @@ const HomeContainerTwo = () => {
                         <div className='main-line main-line--margin-bottom'></div>                        
 
                         <p className='paragraph par-margin-bottom'>
+
                             Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad optio sit est obcaecati odit, reprehenderit possimus quae vel earum aut rem tenetur laboriosam alias dicta eveniet culpa laborum deserunt voluptatibus.
+                            
                         </p>
 
                         <p className='paragraph par-margin-bottom'>
+
                             Lorem ipsum dolor sit amet consectetur adipisicing elit.
+
                         </p>
 
                     </div>
 
                     <div className='wrapper-col wrapper-col--margin-right '>
+
                         <img className='image-size' src={imageAuth} alt="img_author" />
+
                     </div>
 
                     <div className='wrapper-col wrapper-col--margin-right'>
+
                         <img className='image-size' src={imageBuilding} alt="img_building" />
+
                     </div>
 
                 </div>
