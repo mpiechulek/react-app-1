@@ -1,16 +1,20 @@
 .main {
-
+    position: relative;
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;      
-    
-    &__container {      
+    justify-content: flex-start;
+    align-items: center;
+    min-height: 100%;
+    height: 100%;   
+
+    &__container {
         max-width: 95rem;
-        width: 95rem;
+        min-height: 100%;
+        height: 100%;
+        width: 95rem;     
 
         @include respond(md) {
-            width: 100%;           
+            width: 100%;
         }
     }
 

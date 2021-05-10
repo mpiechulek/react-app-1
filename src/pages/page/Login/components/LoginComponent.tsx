@@ -12,15 +12,15 @@ const LoginComponent = () => {
     const onSubmit = (data: any) => {
 
         setIsLoggedIn(!isLoggedIn);
-        console.log(data);
-    }
-
-    if(isLoggedIn) {
-        
-        return <Redirect to='/user'/>
 
     }
-    
+
+    if (isLoggedIn) {
+
+        return <Redirect to='/user' />
+
+    }
+
     return (
 
         <>
@@ -38,12 +38,12 @@ const LoginComponent = () => {
 
                         <input
                             className='login-input login-form-text '
-                            type="email"                           
+                            type="email"
                             placeholder='email'
                             {...register(
                                 "email",
                                 {
-                                    required: 'Email adres is required',
+                                    required: 'Email address is required',
                                     pattern: {
                                         value: /\S+@\S+.\S+/,
                                         message: "Entered value does not match email format"
@@ -56,7 +56,7 @@ const LoginComponent = () => {
 
                         <input
                             className='login-input login-form-text '
-                            type="password"                           
+                            type="password"
                             placeholder='password'
                             {...register(
                                 "password", {
@@ -68,21 +68,25 @@ const LoginComponent = () => {
                             })}
                         />
 
-                        <button 
+                        <button
 
                             className='btn
                                 btn--form-login
                                 login-form-text
                                 login-form-text--button-text-color
                                 login-page-margin-bottom-1 '
-                           
-                             type="submit"
-                            
+
+                            type="submit"
+
+                            disabled={isValid}
+
                         >
-                            Login 
+
+                            Login
+
                          </button>
 
-                         <p>{isValid}</p>
+                        <p>{isValid}</p>
 
                         {errors.password &&
                             <p className='login-form-text login-form-text--alert-text-color'>

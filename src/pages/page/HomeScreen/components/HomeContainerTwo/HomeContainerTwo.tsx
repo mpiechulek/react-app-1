@@ -1,6 +1,6 @@
 import React from 'react'
 import imageAuth from './../../../../../assets/images/2859367.jpg'
-import imageBuilding from './../../../../../assets/images/3610226.jpeg'
+import imageBuilding from './../../../../../assets/images/3610226.jpg'
 
 const HomeContainerTwo = () => {
     return (

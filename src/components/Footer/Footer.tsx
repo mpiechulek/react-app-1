@@ -1,7 +1,10 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { BrowserRouter as Router, Link } from 'react-router-dom';
+import { AuthContext } from '../../context/AuthContext';
 
 const Footer = () => {
+
+    const { isLoggedIn, setIsLoggedIn } = useContext(AuthContext);
 
     return (
 
@@ -33,17 +36,36 @@ const Footer = () => {
 
                     </li>
 
-                    <li className='footer-link-margin'>
+                    {isLoggedIn &&  
 
-                        <Link to='/login'>
+                        <li className='footer-link-margin'>
 
-                            Login
+                            <Link to='/user'>
 
-                        </Link>
+                                User
 
-                    </li>
+                            </Link>
+
+                        </li>
+
+                    }
+
+                    {!isLoggedIn && 
+
+                        <li className='footer-link-margin'>
+
+                            <Link to='/login'>
+
+                                Login
+
+                            </Link>
+
+                        </li>
+
+                    }
 
                 </ul>
+                
             </nav>
 
             <div className='footer__wrapper footer__wrapper--order-1 footer__wrapper--align-center'>
@@ -51,12 +73,17 @@ const Footer = () => {
                 <h2 className='header-main-2 margin-bottom'>SV</h2>
 
                 <p className='paragraph'>
+
                     Images from
+
                     <span>
-                        <a href='https://www.pexels.com' target='_blank'>
+
+                        <a href='https://www.pexels.com' target="_blank" rel="noopener noreferrer">
                             Pixels.com
-                            </a>
+                        </a>
+
                     </span>
+                    
                 </p>
 
                 <p className='paragraph'>Created by Michał Piechulek</p>

@@ -18,7 +18,7 @@ function App() {
 
       <Router>
 
-        <div className="main">
+        {/* <div className="main"> */}
 
           <div className="main__container">
 
@@ -44,7 +44,7 @@ function App() {
 
           </div>
 
-        </div>
+        {/* </div> */}
 
       </Router>
 

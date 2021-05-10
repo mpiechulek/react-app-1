@@ -1,7 +1,7 @@
 import React from 'react'
 import image_1 from './../../../../../assets/images/1762973.jpeg'
-import image_2 from './../../../../../assets/images/2516539.jpeg'
-import image_3 from './../../../../../assets/images/3610226.jpeg'
+import image_2 from './../../../../../assets/images/2516539.jpg'
+import image_3 from './../../../../../assets/images/3610226.jpg'
 
 const HomeContainerFour = () => {
     return (
