@@ -1,14 +1,19 @@
-import React from 'react';
+import React , {lazy, Suspense} from 'react';
 import './App.scss';
-import HomeScreen from './pages/page/HomeScreen/HomeScreen';
-import ContentScreen from './pages/page/ContentScreen/ContentScreen';
 import { Route, BrowserRouter as Router, Switch } from 'react-router-dom';
-import Login from './pages/page/Login/Login';
-import Header from './components/Header/Header';
-import NotFound from './pages/page/NotFound/NotFound';
-import Footer from './components/Footer/Footer';
 import { AuthContextProvider } from './context/AuthContext';
-import { UserPage } from './pages/page/UserPage/UserPage';
+import Header from './components/Header/Header';
+import Footer from './components/Footer/Footer';
+import LoadingScreen from './pages/page/LoadingScreen/LoadingScreen';
+
+/**
+ * Lazy loading 
+ */
+const HomeScreen = lazy(() => import('./pages/page/HomeScreen/HomeScreen'));
+const ContentScreen = lazy(() => import('./pages/page/ContentScreen/ContentScreen'));
+const Login = lazy(() => import('./pages/page/Login/Login'));
+const NotFound = lazy(() => import('./pages/page/NotFound/NotFound'));
+const UserPage = lazy(() => import('./pages/page/UserPage/UserPage'));
 
 function App() {
 
@@ -18,27 +23,31 @@ function App() {
 
       <Router>   
 
-          <div className="main__container">
+          <div className="main__container">         
 
             <Header />
 
             <main>
 
-            <Switch>
+            <Suspense fallback={<LoadingScreen/>}>
 
-              <Route path='/' component={HomeScreen} exact />
+              <Switch>
 
-              <Route path='/home' component={HomeScreen} exact />
+                <Route path='/' component={HomeScreen} exact />
 
-              <Route path='/content' component={ContentScreen} exact />
+                <Route path='/home' component={HomeScreen} exact />
 
-              <Route path='/login' component={Login} exact />
+                <Route path='/content' component={ContentScreen} exact />
 
-              <Route path='/user' component={UserPage} exact />
+                <Route path='/login' component={Login} exact />
 
-              <Route path='' component={NotFound} />
+                <Route path='/user' component={UserPage} exact />
 
-            </Switch>
+                <Route path='' component={NotFound} />
+
+              </Switch>
+
+            </Suspense>
 
             </main>
 
