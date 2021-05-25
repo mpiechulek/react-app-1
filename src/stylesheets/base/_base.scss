@@ -39,6 +39,7 @@ html {
 body {
   height: 100%;
   width: 100%;
+  min-width: 300px;
   min-height: 100vh; 
   background: linear-gradient(-45deg, #ee7752, #530120, #23a6d5, #007a5e);
   background-size: 400% 400%;

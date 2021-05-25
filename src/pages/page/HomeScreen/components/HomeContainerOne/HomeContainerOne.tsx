@@ -15,7 +15,7 @@ const HomeContainerOne = () => {
 
                 <div className='main-header-underline'></div>
 
-                <h4 className='header-4 header-4--green'>IDENTIFY YOURSELF</h4>
+                <h1 className='header-4 header-4--green'>IDENTIFY YOURSELF</h1>
 
             </div>
 
