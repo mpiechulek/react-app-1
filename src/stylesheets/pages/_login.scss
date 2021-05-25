@@ -30,6 +30,11 @@
 
     width: 30rem;
 
+    @include respond(xs) {
+
+        width: 100%;
+    }
+
     .login-page-margin-bottom-2 {
         margin-bottom: 3rem;
     }
